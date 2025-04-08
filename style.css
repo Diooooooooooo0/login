@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background: #343a40 !important;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8b400 !important;
+}
+
+/* Show dropdown on hover */
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #343a40; /* Dark background */
+    border-radius: 5px;
+    padding: 0;
+}
+
+.navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: #495057; /* Slightly lighter dark shade */
+}
+
+/* Nested Dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0;
+    display: none;
+    position: absolute;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+
+
+
+/* Home Section */
+#home {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 9, 30, 0.7);
+    z-index: 1;
+}
+
+#home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#home h2,
+#home p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#home h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Centering & Layout */
+.task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Task Card */
+.task-card {
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+#taskInput {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Button */
+#taskForm button {
+    background: #007bff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+#taskForm button:hover {
+    background: #0056b3;
+}
+
+/* Task List */
+.task-list {
+    max-width: 500px;
+    width: 100%;
+}
+
+.task-list .list-group-item {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.task-list .list-group-item:hover {
+    background: #f8f9fa;
+}
+
+/* Contact Us Section */
+
+#contact_us {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('Contact.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact_us h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#contact_us p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.contact-container {
+    max-width: 1200px;
+    padding: 20px;
+    font-size: larger;
+}
+
+/* About Section */
+
+#about {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('About.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #f8b400;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Social Media Icons */
+footer .fa {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Buttons */
+.mn-btn, .mn-btn1 {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.mn-btn {
+    color: #fff;
+    background: #f8b400;
+    border: 2px solid #f8b400;
+}
+
+.mn-btn:hover {
+    background: transparent;
+    color: #f8b400;
+}
+
+.mn-btn1 {
+    color: #212529;
+    background: #fff;
+    border: 2px solid #212529;
+}
+
+.mn-btn1:hover {
+    background: #212529;
+    color: #fff;
+}
+
+/* Forms (For Contact Us, Login, etc.) */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #f8b400;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #212529;
+}
+
+/* Tables (For Task Lists, Schedules, etc.) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #f8b400;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Cards (For Task Previews, Project Details, etc.) */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: #f8b400;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background: #f1f1f1;
+    padding: 10px;
+    text-align: right;
+}
+
+/* Modals (For Confirmations, Pop-ups) */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-header {
+    background: #f8b400;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Task List (For To-Do Features) */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.task-list .task-name {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 36px;
+    }
+    
+    #home p {
+        font-size: 16px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

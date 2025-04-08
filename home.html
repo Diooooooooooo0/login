@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">TaskMaster</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    
+                    <!-- Dropdown for Categories -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Assignments</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#WST2">Web Systems and Technology 2</a></li>
+                                    <li><a class="dropdown-item" href="#Ethics">Ethics</a></li>
+                                    <li><a class="dropdown-item" href="#Information Management">Information Management</a></li>
+                                    <li><a class="dropdown-item" href="#IPT 1">Integrative Programming and Technologies 1</a></li>
+                                    <li><a class="dropdown-item" href="#Networking 1">Networking 1</a></li>
+                                    <li><a class="dropdown-item" href="#P.E 4">Physical Education 4</a></li>
+                                    <li><a class="dropdown-item" href="#STS">Science, Technology, and Society</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#projects">Projects</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Home Chores</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Living Room">Living Room</a></li>
+                                    <li><a class="dropdown-item" href="#Bedroom">Bedroom</a></li>
+                                    <li><a class="dropdown-item" href="#Comfort Room">Comfort Room</a></li>
+                                    <li><a class="dropdown-item" href="#Kitchen">Kitchen</a></li>
+                                    <li><a class="dropdown-item" href="#Outdoors">Outdoors</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Workout</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#chest">Chest</a></li>
+                                    <li><a class="dropdown-item" href="#arms">Arms</a></li>
+                                    <li><a class="dropdown-item" href="#forearms">Forearms</a></li>
+                                    <li><a class="dropdown-item" href="#abs">Abs</a></li>
+                                    <li><a class="dropdown-item" href="#legs">Legs</a></li>
+                                </ul>
+                            </li>
+                        </ul>                        
+                    </li>
+
+                    <!-- Dropdown for Tasks -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tasksDropdown" role="button" data-bs-toggle="dropdown">
+                            Tasks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#unfinished">Unfinished Tasks</a></li>
+                            <li><a class="dropdown-item" href="#finished">Finished Tasks</a></li>
+                            <li><a class="dropdown-item" href="#start">Start Task</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact us.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <video autoplay loop muted>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2>Welcome to TaskMaster</h2>
+        <p>Manage your tasks efficiently with ease.</p>
+    </section>
+    
+
+    <!-- Main Content -->
+    <main class="task-container my-5">
+        <div class="task-card">
+            <h3 class="text-center mb-3">Add a New Task</h3>
+            <form id="taskForm" class="d-flex flex-column gap-3">
+                <input type="text" id="taskInput" class="form-control" placeholder="Enter your task" required>
+                <input type="number" id="timerInput" class="form-control" placeholder="Enter timer (minutes)" min="1" required>
+                <button type="submit" class="btn btn-primary">+ Add Task</button>
+            </form>
+        </div>
+    
+        <div class="task-list mt-4">
+            <h4 class="text-center">Task List</h4>
+            <ul id="taskList" class="list-group"></ul>
+        </div>
+    </main>        
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="mb-3">
+                <!-- Social Media Icons -->
+                <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <p class="mb-0">Programmed and Developed by: <strong>Prince Jyro O. Labrador</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
